@@ -1,4 +1,4 @@
-def call(string imageName) {
+def call(String imageName) {
     echo "building the image"
     withCredentials([usernamePassword(credentialsId: 'dockerhub-cred', usernameVariable: 'USER', passwordVariable: 'PASSWORD')]) {
         sh "docker build -t $imageName ."
